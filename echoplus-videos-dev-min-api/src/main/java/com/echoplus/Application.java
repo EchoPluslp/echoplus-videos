@@ -6,7 +6,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 import tk.mybatis.spring.annotation.MapperScan;
 
-@SpringBootApplication
+/**
+ * @author EchoPlus
+ */
+@SpringBootApplication()
 @MapperScan(basePackages = "com.echoplus.mapper")
 @ComponentScan(basePackages= {"com.echoplus","org.n3r.idworker"})
 public class Application {

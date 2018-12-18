@@ -24,6 +24,16 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
                         .addResourceLocations("file:D:/Wx/echoplus-video-dev/");
     }
 
+
+    /**
+     * 使得ZKCuratorClient新建zookeeper，并运行
+     * @return
+     */
+    @Bean(initMethod = "init")
+    public ZKCuratorClient zkCuratorClient() {
+        return new ZKCuratorClient();
+    }
+
     @Bean
     public Interceptor getInterceptor() {
         return new Interceptor();
