@@ -95,7 +95,8 @@ public class VideoController extends RedisBasicController{
                 }
                  fileOutputStream = new FileOutputStream(totalFilePath);
                 inputStream = file.getInputStream();
-                IOUtils.copy(inputStream, fileOutputStream);//输入流和输入流拷贝
+                //输入流和输出拷贝
+                IOUtils.copy(inputStream, fileOutputStream);
             }
         }
     } catch (Exception e) {
