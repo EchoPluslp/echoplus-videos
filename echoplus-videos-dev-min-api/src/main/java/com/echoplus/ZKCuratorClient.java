@@ -1,9 +1,9 @@
 package com.echoplus;
 
-import com.alibaba.druid.util.StringUtils;
 import com.echoplus.config.ResourceConfig;
 import com.echoplus.utils.JsonUtils;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
@@ -89,17 +89,26 @@ public class ZKCuratorClient {
 //                String songPath = bgm.getPath();
 
 //                String filePath = "E:\\Wx\\echoplus-video-dev\\bgm" + songPath;
-                String filePath = resourceConfig.getFileSpace() + songPath;
 
-                StringBuilder stringBuilder = new StringBuilder(filePath);
+                String filePath = resourceConfig.getFileSpace() + songPath;
                 //3.定义下载的路径 播放路径
 //                设置浏览器上面的播放路径-->将\\转换为/
                 //注意设置路径的编码格式，避免出现乱码问题
-                String forxPath = URLEncoder.encode(stringBuilder.toString().replaceAll("\\\\","/"),"UTF-8");
+                // 3. 定义下载的路径（播放url）linux
+                String[] arrPath = songPath.split("/");
+                String finalPath = "";
+                // 3.1 处理url的斜杠以及编码
+                for(int i = 0; i < arrPath.length ; i ++) {
+                    if (StringUtils.isNotBlank(arrPath[i])) {
+                        finalPath += "/";
+                        finalPath += URLEncoder.encode(arrPath[i], "UTF-8") ;
+                    }
+                }
+                log.info("finalPath="+finalPath);
+//                String urlPath = "http://127.0.0.1:8080/mvc" + finalPath;
+                String urlPath = resourceConfig.getBgmServer()+ finalPath;
 
-//                String urlPath = "http://127.0.0.1:8080/mvc" + forxPath;
-                String urlPath = resourceConfig.getBgmServer()+ forxPath;
-
+                log.info("urlPath="+urlPath);
                 String operaTypeADD = "1";
 
                 //通过operatorType判断是添加或者删除
