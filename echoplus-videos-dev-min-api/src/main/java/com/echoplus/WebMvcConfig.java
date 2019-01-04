@@ -21,7 +21,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
                     .addResourceLocations("classpath:/META-INF/resources/")
-                        .addResourceLocations("file:D:/Wx/echoplus-video-dev/");
+                        .addResourceLocations("file:C:/Wx/echoplus-video-dev/");
     }
 
 
