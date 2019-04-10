@@ -42,9 +42,9 @@ public class UserController {
     @PostMapping("/uploadFace")
     public EchoPlusJSONResult uploadFile(String userId,MultipartFile[] files) throws IOException {
         //拼接文件夹路径
-        String dirFilePath = "C:/Wx/echoplus-video-dev";
+        String dirFilePath = System.lineSeparator()+"user"+System.lineSeparator()+"echoplus-video-dev";
         //拼接文件路径
-        String fileDbPath = "/" + userId + "/";
+        String fileDbPath = System.lineSeparator() + userId + System.lineSeparator();
         if (userId == null) {
             return EchoPlusJSONResult.errorMsg("用户Id为空，请校验");
         }

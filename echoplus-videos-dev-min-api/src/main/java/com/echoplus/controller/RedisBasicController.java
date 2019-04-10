@@ -15,10 +15,10 @@ public class RedisBasicController {
 
 
 	//文件保存目录
-	public static final String FILE_STACE = "C:/Wx/echoplus-video-dev/";
+	public static final String FILE_STACE = "/user/echoplus-video-dev/";
 
 	//ffmpeg所在目录
-	public static final String FFMPEG_EXE = "C:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe";
+	public static final String FFMPEG_EXE = "ffmpeg";
 
 	public static final Integer PAGE_SIZE = 5;
 }

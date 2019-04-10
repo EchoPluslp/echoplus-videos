@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
@@ -19,5 +20,10 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-	
+
+    @RequestMapping("/demo")
+    public String home() {
+        return "Hello Docker World";
+    }
+
 }
