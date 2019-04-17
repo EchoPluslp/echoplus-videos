@@ -13,7 +13,7 @@ import java.util.List;
  * ffmpeg测试类
  *
  * @author Liupeng
- * @createTime 2018-11-13 22:38
+ * @createTime 2018-11-13 22:50
  **/
 public class FfmpegMerge {
 
