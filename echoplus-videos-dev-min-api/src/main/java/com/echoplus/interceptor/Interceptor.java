@@ -1,17 +1,14 @@
 package com.echoplus.interceptor;
 
 
-import com.echoplus.controller.RedisBasicController;
 import com.echoplus.utils.EchoPlusJSONResult;
 import com.echoplus.utils.JsonUtils;
 import com.echoplus.utils.RedisOperator;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

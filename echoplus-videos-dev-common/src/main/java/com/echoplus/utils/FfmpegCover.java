@@ -18,12 +18,12 @@ public class FfmpegCover {
     private String  ffmpegExe;
 
 
-
-    public static void main(String[] args) throws IOException {
-        // 生成的截图>ffmpeg.exe -ss 00:00:01 -y -i new.mp4 -vframes 1   new.jpg
-        FfmpegCover ffmpegUtils = new FfmpegCover("D:\\Wx\\ffempg\\bin\\ffmpeg.exe");
-        ffmpegUtils.convertor("D:\\Wx\\ffempg\\bin\\test.mp4","D:\\Wx\\ffempg\\bin\\test.jpg");
-    }
+//
+//    public static void main(String[] args) throws IOException {
+//        // 生成的截图>ffmpeg.exe -ss 00:00:01 -y -i new.mp4 -vframes 1   new.jpg
+//        FfmpegCover ffmpegUtils = new FfmpegCover("D:\\Wx\\ffempg\\bin\\ffmpeg.exe");
+//        ffmpegUtils.convertor("D:\\Wx\\ffempg\\bin\\test.mp4","D:\\Wx\\ffempg\\bin\\test.jpg");
+//    }
 
     public void convertor(String sorce, String target) throws IOException {
         List<String> commands = new ArrayList<>();

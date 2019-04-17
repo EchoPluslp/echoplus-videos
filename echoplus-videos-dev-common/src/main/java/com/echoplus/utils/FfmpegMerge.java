@@ -21,10 +21,10 @@ public class FfmpegMerge {
 
 
 
-    public static void main(String[] args) throws IOException {
-        FfmpegMerge ffmpegUtils = new FfmpegMerge("D:\\Wx\\ffempg\\bin\\ffmpeg.exe");
-        ffmpegUtils.convertor("D:\\Wx\\ffempg\\bin\\test.mp4","D:\\Wx\\echoplus-video-dev\\bgm\\music.mp3",8,"D:\\Wx\\ffempg\\bin\\merge.mp4");
-    }
+//    public static void main(String[] args) throws IOException {
+//        FfmpegMerge ffmpegUtils = new FfmpegMerge("D:\\Wx\\ffempg\\bin\\ffmpeg.exe");
+//        ffmpegUtils.convertor("D:\\Wx\\ffempg\\bin\\test.mp4","D:\\Wx\\echoplus-video-dev\\bgm\\music.mp3",8,"D:\\Wx\\ffempg\\bin\\merge.mp4");
+//    }
 
     public void convertor(String sorce,String mp3Source, double seconds, String target) throws IOException {
         //ffmpeg.exe -i test.mp4 -i bgm.mp3 -t 7 -y new.mp4

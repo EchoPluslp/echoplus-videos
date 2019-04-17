@@ -16,11 +16,11 @@ public class FfmpegUtils {
 
 
 
-    public static void main(String[] args) throws IOException {
-        // 生成的截图>ffmpeg.exe -ss 00:00:01 -y -i new.mp4 -vframes 1   new.jpg
-        FfmpegUtils ffmpegUtils = new FfmpegUtils("D:\\Wx\\ffempg\\bin\\ffmpeg.exe");
-        ffmpegUtils.convertor("D:\\Wx\\ffempg\\bin\\test.mp4","D:\\Wx\\ffempg\\bin\\test2.avi");
-    }
+//    public static void main(String[] args) throws IOException {
+//        // 生成的截图>ffmpeg.exe -ss 00:00:01 -y -i new.mp4 -vframes 1   new.jpg
+//        FfmpegUtils ffmpegUtils = new FfmpegUtils("D:\\Wx\\ffempg\\bin\\ffmpeg.exe");
+//        ffmpegUtils.convertor("D:\\Wx\\ffempg\\bin\\test.mp4","D:\\Wx\\ffempg\\bin\\test2.avi");
+//    }
 
     public void convertor(String sorce, String target) throws IOException {
         List<String> commands = new ArrayList<>();

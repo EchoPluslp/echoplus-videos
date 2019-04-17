@@ -12,7 +12,6 @@
 
     <artifactId>echoplus-videos-dev-common</artifactId>
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -46,8 +45,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-            </exclusions>
         </dependency>
 
         <!-- 资源配置 -->
@@ -66,13 +63,13 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.1.0</version>
+            <version>1.1.13</version>
         </dependency>
 
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.0</version>
+            <version>1.1.13</version>
         </dependency>
 
         <dependency>
@@ -161,7 +158,6 @@
             <artifactId>curator-recipes</artifactId>
             <version>4.0.0</version>
         </dependency>
-
     </dependencies>
-
+    
 </project>
