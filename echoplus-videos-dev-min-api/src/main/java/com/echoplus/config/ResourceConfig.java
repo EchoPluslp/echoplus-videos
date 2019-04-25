@@ -1,6 +1,7 @@
 package com.echoplus.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -9,8 +10,10 @@ import org.springframework.stereotype.Component;
  * @author Liupeng
  * @createTime 2018-12-18 0:20
  **/
-@Configuration
+@Component
+//@EnableConfigurationProperties
 @ConfigurationProperties(prefix = "com.echoplus")
+@Configuration
 @PropertySource("classpath:/resource_prod.properties")
 public class ResourceConfig {
     private String zookeeperServer;
